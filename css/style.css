@@ -280,15 +280,15 @@ img {
 }
 
 .slide-wrapper-1::after {
-  background-image: url(/img/slides/slide-phone.png);
+  background-image: url(../img/slides/slide-phone.png);
 }
 
 .slide-wrapper-2::after {
-  background-image: url(/img/slides/slide-monitor.png);
+  background-image: url(../img/slides/slide-monitor.png);
 }
 
 .slide-wrapper-3::after {
-  background-image: url(/img/slides/slide-pad.png);
+  background-image: url(../img/slides/slide-pad.png);
 }
 
 .slide {
@@ -406,19 +406,19 @@ img {
 .service-1::after {
   top: 0;
   left: 0;
-  background-image: url(/img/services/illustration-1.png);
+  background-image: url(../img/services/illustration-1.png);
 }
 
 .service-2::after {
   top: 0;
   left: 0;
-  background-image: url(/img/services/illustration-2.png);
+  background-image: url(../img/services/illustration-2.png);
 }
 
 .service-3::after {
   top: 0;
   left: 0;
-  background-image: url(/img/services/illustration-3.png);
+  background-image: url(../img/services/illustration-3.png);
 }
 
 .img-service {
@@ -570,7 +570,7 @@ img {
   right: 65px;
   height: 208px;
   width: 306px;
-  background-image: url(/img/nerds-illustration.png);
+  background-image: url../img/nerds-illustration.png);
   background-color: transparent;
   background-repeat: no-repeat;
 }
@@ -1234,19 +1234,19 @@ img {
 }
 
 .social-icon-1::after {
-  background-image: url(/img/social/vk.svg);
+  background-image: url(../img/social/vk.svg);
   height: 15px;
   width: 26px;
 }
 
 .social-icon-2::after {
-  background-image: url(/img/social/facebook.svg);
+  background-image: url(../img/social/facebook.svg);
   height: 22px;
   width: 12px;
 }
 
 .social-icon-3::after {
-  background-image: url(/img/social/instagram.svg);
+  background-image: url(../img/social/instagram.svg);
   height: 21px;
   width: 21px;
 }

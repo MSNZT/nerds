@@ -280,15 +280,15 @@ img {
 }
 
 .slide-wrapper-1::after {
-  background-image: url(../img/slides/slide-phone.png);
+  background-image: url(/img/slides/slide-phone.png);
 }
 
 .slide-wrapper-2::after {
-  background-image: url(../img/slides/slide-monitor.png);
+  background-image: url(/img/slides/slide-monitor.png);
 }
 
 .slide-wrapper-3::after {
-  background-image: url(../img/slides/slide-pad.png);
+  background-image: url(/img/slides/slide-pad.png);
 }
 
 .slide {

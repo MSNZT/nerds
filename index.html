@@ -6,6 +6,7 @@
   <title>Дизайн студия Nerd's</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -21,7 +22,7 @@
           <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Nerd's">
         </a>
         <ul class="site-navigation">
-          <li class="nav-item"><a class="nav-link current" href="blank.html">Студия</a></li>
+          <li class="nav-item"><a class="nav-link current" href="index.html">Студия</a></li>
           <li class="nav-item"><a class="nav-link" href="blank.html">Клиенты</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Магазин</a></li>
           <li class="nav-item"><a class="nav-link" href="blank.html">Контакты</a></li>
@@ -59,9 +60,9 @@
             </li>
           </ul>
           <div class="slider-controls">
-            <button class="control-btn control-current" type="button" aria-label="Первый слайд"></button>
-            <button class="control-btn" type="button" aria-label="Второй слайд"></button>
-            <button class="control-btn" type="button" aria-label="Третий слайд"></button>
+            <button class="control-btn control-current control-1" type="button" aria-label="Первый слайд"></button>
+            <button class="control-btn control-2" type="button" aria-label="Второй слайд"></button>
+            <button class="control-btn control-3" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
       </div>
@@ -109,7 +110,6 @@
           </div>
 
           <div class="about-wrapper-2 about-img">
-            <!-- <img class="grid2-img" src="img/nerds-illustration.png" width="360" height="208" alt="Логотип"> -->
             <p class="uppercase">с 2004 года любим точность во всем:</p>
             <dl class="accuracy">
               <div class="accuracy-block">
@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <section class="clients">
+    <section class="clients" id="clients">
       <div class="container">
         <h2 class="visually-hidden">Наши клиенты</h2>
         <ul class="clients-list">
@@ -173,12 +173,12 @@
             <a class="contacts-phone" href="tel:78005558628">+7 800 555-86-28</a>
           </div>
           <p class="btn-wrapper">
-            <a class="btn" href="#">Напишите нам</a>
+            <a class="btn btn-contacts" href="#">Напишите нам</a>
           </p>
         </div>
       </div>
       <div class="contacts-map">
-        <img class="map" src="img/map.png" width="1140" height="416" alt="Карта">
+        <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae45ff78178a429984b56ee94443bb62eff915bfb49e2683e4d47900f7b19f3f5" height="416" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       </div>
     </section>
   </main>
@@ -190,13 +190,19 @@
         <h2 class="visually-hidden">Давайте дружить</h2>
         <ul class="social-list">
           <li>
-            <a class="social-btn social-icon social-icon-1" href="#"></a>
+            <a class="social-btn social-icon social-icon-1" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li>
-            <a class="social-btn social-icon social-icon-2" href="#"></a>
+            <a class="social-btn social-icon social-icon-2" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li>
-            <a class="social-btn social-icon social-icon-3" href="#"></a>
+            <a class="social-btn social-icon social-icon-3" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -209,32 +215,35 @@
     </div>
   </footer>
 
-  <section class="modal modal-feedback">
+  <section class="modal">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+    <form class="feedback" method="get" action="https://echo.htmlacademy.ru" novalidate>
       <fieldset>
         <legend class="modal-title">Напишите нам</legend>
         <ul class="form-list">
           <li>
             <label for="feedback-name">Ваше имя:</label>
-            <input class="modal-input modal-form" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+            <input class="modal-input modal-form modal-name" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия" required>
           </li>
           <li>
             <label for="feedback-email">Ваш email:</label>
-            <input class="modal-input modal-form" type="email" name="email" id="feedback-email"
-              placeholder="email@example.com">
+            <input class="modal-input modal-form modal-email" type="email" name="email" id="feedback-email"
+              placeholder="email@example.com" required>
           </li>
           <li>
             <label for="feedback-text">Текст письма:</label>
-            <textarea class="modal-textarea modal-form" cols="15" rows="5" name="text" id="feedback-text"
-              placeholder="В свободной форме"></textarea>
+            <textarea class="modal-textarea modal-form modal-text" cols="15" rows="5" name="text" id="feedback-text"
+              placeholder="В свободной форме" required></textarea>
           </li>
         </ul>
       </fieldset>
       <button class="btn feedback-btn" type="submit">Отправить</button>
+      <button class="btn-close" type="button" aria-label="Закрыть"></button>
     </form>
-    <button class="btn-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/popup.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>
